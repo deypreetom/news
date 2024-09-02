@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Tiles</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1702581174633-5553a4243478?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        }
+        .tile-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+        }
+        .tile {
+            position: relative;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: .25rem;
+            overflow: hidden;
+            transition: transform 1.8s, box-shadow 0.3s;
+            height: 0;
+            padding-top: 50%; /*100% Creates a square aspect ratio */
+        }
+        .tile img {
+            position: absolute; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: ;
+        }
+        .tile:hover {
+            /*transform: scale(1.05);*/
+            transform: rotateY(360deg);            
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .tile h5 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: .5rem;
+            text-align: center;
+            margin: 0;
+        }
+        @media (max-width: 1200px) {
+            .tile-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        @media (max-width: 992px) {
+            .tile-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .tile-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 576px) {
+            .tile-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body bgcolor: Green;>
+    <div class="container my-5">
+        <div class="tile-container">
+            <!-- Updated Newspaper Tiles -->
+            <div class="tile">
+                <a href="https://prothomalo.com" class="text-decoration-none" target="_blank">
+                    <img src="images/prothom-alo.com.jpg" alt="Prothom Alo">
+                    <h5>Prothom Alo</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="https://bd-pratidin.com" class="text-decoration-none" target="_blank">
+                    <img src="images/bd-pratidin.com.jpg" alt="Bangladesh Pratidin">
+                    <h5>Bangladesh Pratidin</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="https://ittefaq.com.bd" class="text-decoration-none" target="_blank">
+                    <img src="images/ittefaq.com.bd.jpg" alt="Ittefaq">
+                    <h5>Ittefaq</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="https://kalerkantho.com" class="text-decoration-none" target="_blank">
+                    <img src="images/kalerkantho.com.jpg" alt="Kaler Kantho">
+                    <h5>Kaler Kantho</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="https://dailynayadiganta.com" class="text-decoration-none" target="_blank">
+                    <img src="images/dailynayadiganta.com.jpg" alt="Daily Naya Diganta">
+                    <h5>Daily Naya Diganta</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="https://www.amarsangbad.com/" class="text-decoration-none" target="_blank">
+                    <img src="images/amar-sangbad.com.jpg" alt="Daily Amar Sangbad">
+                    <h5>Daily Amar Sangbad</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="https://protidinersangbad.com" class="text-decoration-none" target="_blank">
+                    <img src="images/protidinersangbad.com.jpg" alt="Protidiner Sangbad">
+                    <h5>Protidiner Sangbad</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="https://jugantor.com" class="text-decoration-none" target="_blank">
+                    <img src="images/jugantor.com.jpg" alt="Jugantor">
+                    <h5>Jugantor</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="https://dailysangram.com" class="text-decoration-none" target="_blank">
+                    <img src="images/dailysangram.com.jpg" alt="Daily Sangram">
+                    <h5>Daily Sangram</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="https://mzamin.com" class="text-decoration-none" target="_blank">
+                    <img src="images/mzamin.com.jpg" alt="Daily Manab Zamin">
+                    <h5>Daily Manab Zamin</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="https://dainikamadershomoy.com" class="text-decoration-none" target="_blank">
+                    <img src="images/dainikamadershomoy.com.jpg" alt="Dainik Amadershomoy">
+                    <h5>Dainik Amadershomoy</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="https://bonikbarta.net" class="text-decoration-none" target="_blank">
+                    <img src="images/bonikbarta.com.jpg" alt="Bonik Barta">
+                    <h5>Bonik Barta</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.samakal.com" class="text-decoration-none" target="_blank">
+                    <img src="images/samakal.net.jpg" alt="Samakal">
+                    <h5>Samakal</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.dailyjanakantha.com" class="text-decoration-none" target="_blank">
+                    <img src="images/dailyjanakantha.com.jpg" alt="Janakantha">
+                    <h5>Janakantha</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.jjdin.com" class="text-decoration-none" target="_blank">
+                    <img src="images/jjdin.com.jpg" alt="Jai Jai Din">
+                    <h5>Jai Jai Din</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.bhorerkagoj.net" class="text-decoration-none" target="_blank">
+                    <img src="images/bhorerkagoj.net.jpg" alt="Daily Bhorer Kagoj">
+                    <h5>Daily Bhorer Kagoj</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.arthoniteerkagoj.com" class="text-decoration-none" target="_blank">
+                    <img src="images/arthoniteerkagoj.com.jpg" alt="Arthoniteer Kagoj">
+                    <h5>Arthoniteer Kagoj</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.dailyinqilab.com" class="text-decoration-none" target="_blank">
+                    <img src="images/the-daily-inqilab.png" alt="Daily Inqilab">
+                    <h5>Daily Inqilab</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.sangbad.net.bd" class="text-decoration-none" target="_blank">
+                    <img src="images/sangbad.png" alt="Sangbad">
+                    <h5>Sangbad</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.manobkantha.com.bd" class="text-decoration-none" target="_blank">
+                    <img src="images/manobkantha.com.jpg" alt="Manob Kantha">
+                    <h5>Manob Kantha</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.suprobhat.com" class="text-decoration-none" target="_blank">
+                    <img src="images/suprobhat.com.jpg" alt="Daily Suprobhat">
+                    <h5>Daily Suprobhat</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.bd-journal.com" class="text-decoration-none" target="_blank">
+                    <img src="images/bdjournal.jpg" alt="Bangladesh Journal">
+                    <h5>Bangladesh Journal</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="https://dainikdinkal.net/" class="text-decoration-none" target="_blank">
+                    <img src="images/dailydinkal.net.jpg" alt="Daily Dinkal">
+                    <h5>Daily Dinkal</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.alokitobangladesh.com" class="text-decoration-none" target="_blank">
+                    <img src="images/alokitobangladesh.com.jpg" alt="Alokito Bangladesh">
+                    <h5>Alokito Bangladesh</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.ajkerbazzar.com" class="text-decoration-none" target="_blank">
+                    <img src="images/ajkerbazzar.com.jpg" alt="Ajker Bazar">
+                    <h5>Ajker Bazar</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.amaderorthoneeti.com" class="text-decoration-none" target="_blank">
+                    <img src="images/daily-amadar-orthoneeti.png" alt="Amadar Orthoneeti">
+                    <h5>Amadar Orthoneeti</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.bangladeshpost.net" class="text-decoration-none" target="_blank">
+                    <img src="images/bangladeshpost.jpg" alt="Bangladesh Post">
+                    <h5>Bangladesh Post</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.sorejominbarta.com" class="text-decoration-none" target="_blank">
+                    <img src="images/sorejominbarta.com.jpg" alt="Sorejomin Barta">
+                    <h5>Sorejomin Barta</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="https://e.khoborpatrabd.com/" class="text-decoration-none" target="_blank">
+                    <img src="images/khabarpatrabd.com.jpg" alt="Khabar Patra">
+                    <h5>Khabar Patra</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.dailyvorerpata.com" class="text-decoration-none" target="_blank">
+                    <img src="images/dailyvorerpata.com.jpg" alt="Vorer Pata">
+                    <h5>Vorer Pata</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.shomoyeralo.com" class="text-decoration-none" target="_blank">
+                    <img src="images/shomoyeralo.jpg" alt="Shomoyer Alo">
+                    <h5>Shomoyer Alo</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.kalbela.com" class="text-decoration-none" target="_blank">
+                    <img src="images/kalbela.png" alt="Kal Bela">
+                    <h5>Kal Bela</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.sharebiz.net" class="text-decoration-none" target="_blank">
+                    <img src="images/sharebiz.net.jpg" alt="Share biz">
+                    <h5>Share biz</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.dailybartoman.com" class="text-decoration-none" target="_blank">
+                    <img src="images/dailybartoman.com.jpg" alt="Daily Bartoman">
+                    <h5>Daily Bartoman</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.ajkalerkhobor.com" class="text-decoration-none" target="_blank">
+                    <img src="images/ajkalerkhobor.com.jpg" alt="Ajkaler Khobor">
+                    <h5>Ajkaler Khobor</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.sangbadkonika.com" class="text-decoration-none" target="_blank">
+                    <img src="images/sangbadkonika.com.jpg" alt="Sangbad Konika">
+                    <h5>Sangbad Konika</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.kholakagojbd.com" class="text-decoration-none" target="_blank">
+                    <img src="images/kholakagojbd.com.gif" alt="Khola Kagoj">
+                    <h5>Khola Kagoj</h5>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="http://www.gonokantho.com" class="text-decoration-none" target="_blank">
+                    <img src="images/gonokantho.jpg" alt="Gonokantho">
+                    <h5>Gonokantho</h5>
+                </a>
+            </div>           
+        </div>
+    </div>
+</body>
+</html>
